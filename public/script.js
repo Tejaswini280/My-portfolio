@@ -448,14 +448,21 @@ const createParticles = () => {
 const profileImage = document.getElementById('profileImage');
 if (profileImage) {
     profileImage.onerror = function() {
-        // If image fails to load, show a placeholder
+        // If image fails to load, show a placeholder with better styling
         this.style.display = 'none';
-        const placeholder = document.createElement('i');
-        placeholder.className = 'fas fa-user-circle';
-        placeholder.style.fontSize = '8rem';
-        placeholder.style.color = '#fbbf24';
+        const placeholder = document.createElement('div');
+        placeholder.className = 'profile-placeholder';
+        placeholder.innerHTML = `
+            <i class="fas fa-user-circle"></i>
+            <p>Add your photo as<br><strong>profile.jpg</strong></p>
+        `;
         this.parentElement.appendChild(placeholder);
     };
+    
+    // Add loading state
+    profileImage.addEventListener('load', function() {
+        this.classList.add('loaded');
+    });
 }
 
 // Add scroll progress indicator
