@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejaswini Kawade - Portfolio</title>
+    <meta name="description" content="Tejaswini Kawade - MSc Computer Science Student, Full-Stack Developer, Cloud & DevOps Enthusiast">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -21,6 +22,7 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -33,28 +35,151 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Animated Background -->
+        <div class="hero-background">
+            <div class="code-rain"></div>
+            <div class="grid-overlay"></div>
+            <canvas id="particleCanvas"></canvas>
+        </div>
+        
+        <!-- Floating Tech Icons -->
+        <div class="floating-icons">
+            <i class="fab fa-docker floating-icon" style="--delay: 0s; --x: 10%; --y: 20%;"></i>
+            <i class="fab fa-aws floating-icon" style="--delay: 1s; --x: 85%; --y: 15%;"></i>
+            <i class="fab fa-jenkins floating-icon" style="--delay: 2s; --x: 15%; --y: 70%;"></i>
+            <i class="fab fa-react floating-icon" style="--delay: 1.5s; --x: 80%; --y: 75%;"></i>
+            <i class="fab fa-python floating-icon" style="--delay: 0.5s; --x: 90%; --y: 45%;"></i>
+            <i class="fab fa-java floating-icon" style="--delay: 2.5s; --x: 12%; --y: 45%;"></i>
+        </div>
+
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Hi, I'm <span class="highlight">Tejaswini Kawade</span></h1>
-                <h2>Computer Science Student</h2>
-                <p>Driven and adaptable Computer Science post-graduate seeking a full-time role in Software Development at TechCorp I am focused efficient reliable systems while continuously improving for skill-enhancing opportunities.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn primary">Get In Touch</a>
-                    <a href="#projects" class="btn secondary">View Projects</a>
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">tejukawade2003@gmail.com</span>
                 </div>
+                
+                <div class="glitch-wrapper">
+                    <h1 class="glitch" data-text="Hi, I'm Tejaswini Kawade">
+                        Hi, I'm <span class="highlight gradient-text">Tejaswini Kawade</span>
+                    </h1>
+                </div>
+                
+                <div class="role-container">
+                    <span class="role-prefix">$</span>
+                    <h2 class="typing-text" id="typingText"></h2>
+                    <span class="cursor-blink">|</span>
+                </div>
+                
+                <p class="hero-description fade-in-up">
+                    <i class="fas fa-code"></i> Building scalable applications with modern tech
+                    <br>
+                    <i class="fas fa-cloud"></i> Automating infrastructure with DevOps practices
+                    <br>
+                    <i class="fas fa-rocket"></i> Passionate about cloud computing & continuous learning
+                </p>
+                
+                <div class="tech-stack-preview">
+                    <div class="tech-badge"><i class="fab fa-docker"></i> Docker</div>
+                    <div class="tech-badge"><i class="fab fa-aws"></i> AWS</div>
+                    <div class="tech-badge"><i class="fab fa-jenkins"></i> Jenkins</div>
+                    <div class="tech-badge"><i class="fas fa-cubes"></i> Terraform</div>
+                    <div class="tech-badge"><i class="fab fa-java"></i> Java</div>
+                    <div class="tech-badge"><i class="fab fa-python"></i> Python</div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn primary glow-btn">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <a href="#projects" class="btn secondary">
+                        <i class="fas fa-code-branch"></i> View Projects
+                    </a>
+                    <a href="#" class="btn outline" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                
                 <div class="social-links">
-                    <a href="mailto:tejaswinikawade@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://linkedin.com/in/tejaswini-kawade"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Tejaswini280"><i class="fab fa-github"></i></a>
+                    <a href="mailto:tejaswini.kawade@example.com" title="Email" class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                        <span class="tooltip">Email</span>
+                    </a>
+                    <a href="https://linkedin.com/in/tejaswinikawade" target="_blank" title="LinkedIn" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="tooltip">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/tejaswinikawade" target="_blank" title="GitHub" class="social-icon">
+                        <i class="fab fa-github"></i>
+                        <span class="tooltip">GitHub</span>
+                    </a>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow">
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
+            
             <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-img">
-                        <i class="fas fa-user-circle"></i>
+                <div class="profile-card-3d">
+                    <!-- Holographic Effect -->
+                    <div class="hologram-ring ring-1"></div>
+                    <div class="hologram-ring ring-2"></div>
+                    <div class="hologram-ring ring-3"></div>
+                    
+                    <div class="profile-card">
+                        <div class="card-glow"></div>
+                        <div class="profile-img">
+                            <div class="img-border"></div>
+                            <img src="profile.jpg" alt="Tejaswini Kawade" id="profileImage">
+                            <div class="status-indicator">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Available for opportunities</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="profile-name">Tejaswini Kawade</h3>
+                        <p class="profile-role">
+                            <i class="fas fa-laptop-code"></i> Full-Stack Developer
+                        </p>
+                        <p class="location">
+                            <i class="fas fa-map-marker-alt"></i> Maharashtra, India
+                        </p>
+                        
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="stat-value">9.18</div>
+                                <div class="stat-label">CGPA</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                                <div class="stat-value">3+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                                <div class="stat-value">4+</div>
+                                <div class="stat-label">Certs</div>
+                            </div>
+                        </div>
+                        
+                        <div class="code-snippet">
+                            <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Tejaswini"</span>,
+  <span class="code-property">skills</span>: [<span class="code-string">"DevOps"</span>, <span class="code-string">"Cloud"</span>],
+  <span class="code-property">passion</span>: <span class="code-string">"Innovation"</span>
+};</code></pre>
+                        </div>
                     </div>
-                    <h3>Tejaswini Kawade</h3>
-                    <p>CS Student | Developer</p>
                 </div>
             </div>
         </div>
@@ -66,20 +191,26 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Driven and adaptable Computer Science post-graduate seeking a full-time role in Software Development at TechCorp. I am focused on creating efficient, reliable systems while continuously improving for skill-enhancing opportunities.</p>
+                    <p>I'm a driven Computer Science postgraduate student with a strong foundation in software development, cloud computing, and DevOps practices. Currently pursuing my MSc in Computer Science with a CGPA of 9.18, I bring both academic excellence and practical experience in building scalable applications.</p>
+                    <p>My expertise spans full-stack development, cloud infrastructure automation, and CI/CD pipeline implementation. I'm passionate about leveraging modern technologies like Docker, Terraform, Jenkins, and AWS to create efficient, automated solutions. I thrive in collaborative environments and am constantly learning to stay ahead in the rapidly evolving tech landscape.</p>
+                    <p>Based in Maharashtra, India, I'm actively seeking opportunities to contribute my technical expertise to innovative and growth-oriented organizations in software development and cloud/DevOps roles.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat">
+                        <h3>9.18</h3>
+                        <p>MSc CGPA</p>
+                    </div>
+                    <div class="stat">
+                        <h3>9.6</h3>
+                        <p>BSc CGPA</p>
+                    </div>
+                    <div class="stat">
+                        <h3>3+</h3>
+                        <p>Major Projects</p>
+                    </div>
+                    <div class="stat">
                         <h3>4+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat">
-                        <h3>2+</h3>
                         <p>Certifications</p>
-                    </div>
-                    <div class="stat">
-                        <h3>8.4</h3>
-                        <p>CGPA</p>
                     </div>
                 </div>
             </div>
@@ -94,28 +225,39 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>BE Computer Science</h3>
-                        <h4>Sinhgad College of Engineering, Pune, Maharashtra</h4>
-                        <span class="timeline-date">2022 - 2026</span>
-                        <p>Sinhgad college of commerce and science (CGPA 8.4)</p>
+                        <span class="timeline-date">2023 – Present</span>
+                        <h3>MSc Computer Science</h3>
+                        <h4>Indira College of Commerce and Science</h4>
+                        <p class="grade">CGPA: 9.18</p>
+                        <p>Advanced studies in software development, cloud computing, DevOps, and modern development practices.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>HSC</h3>
-                        <h4>Sinhgad College of Engineering, Pune, Maharashtra</h4>
-                        <span class="timeline-date">2020 - 2022</span>
-                        <p>Sinhgad college of commerce and science (Percentage 85.5%)</p>
+                        <span class="timeline-date">2020 – 2023</span>
+                        <h3>BSc Computer Science</h3>
+                        <h4>Sangamner College, Sangamner</h4>
+                        <p class="grade">CGPA: 9.6</p>
+                        <p>Strong foundation in programming, data structures, algorithms, and database management.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>SSC</h3>
-                        <h4>Sinhgad College of Engineering, Pune, Maharashtra</h4>
-                        <span class="timeline-date">2018 - 2020</span>
-                        <p>Sinhgad college of commerce and science (Percentage 85.5%)</p>
+                        <span class="timeline-date">2019 – 2020</span>
+                        <h3>Higher Secondary Certificate (HSC)</h3>
+                        <h4>S.B.S. Rajshri Junior College</h4>
+                        <p class="grade">Percentage: 78.83%</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2017 – 2018</span>
+                        <h3>Secondary School Certificate (SSC)</h3>
+                        <h4>S.M.B.T Vidyalaya, Nandur Shingote</h4>
+                        <p class="grade">Percentage: 80.60%</p>
                     </div>
                 </div>
             </div>
@@ -125,64 +267,83 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title">Skills & Technologies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Skills</h3>
+                    <h3><i class="fas fa-code"></i> Programming & Core Skills</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
                         <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">Collections</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fas fa-globe"></i> Web Development</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML5 and CSS3</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Frameworks</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript ES6+</span>
                         <span class="skill-tag">Bootstrap</span>
-                        <span class="skill-tag">Technical CSS</span>
-                        <span class="skill-tag">Cloud Platforms</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">Responsive Design</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> Database</h3>
+                    <h3><i class="fas fa-database"></i> Databases</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">PostgreSQL</span>
                         <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">SQL Joins</span>
+                        <span class="skill-tag">SQL Queries</span>
                         <span class="skill-tag">Normalization</span>
+                        <span class="skill-tag">Database Design</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Design tools</h3>
+                    <h3><i class="fas fa-server"></i> Frameworks & Tools</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">UI/UX</span>
-                        <span class="skill-tag">Sublime</span>
-                        <span class="skill-tag">Brackets</span>
-                        <span class="skill-tag">Postman</span>
-                        <span class="skill-tag">Canva</span>
-                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Maven</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Platform & Networking Concepts</h3>
+                    <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Networking concepts</span>
-                        <span class="skill-tag">Addressing</span>
-                        <span class="skill-tag">DNS</span>
-                        <span class="skill-tag">TCP</span>
-                        <span class="skill-tag">Subnetting</span>
-                        <span class="skill-tag">IPv6</span>
-                        <span class="skill-tag">Routing and switching</span>
-                        <span class="skill-tag">Troubleshooting</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">AWS EC2</span>
+                        <span class="skill-tag">AWS S3</span>
+                        <span class="skill-tag">AWS IAM</span>
+                        <span class="skill-tag">AWS VPC</span>
+                        <span class="skill-tag">Linux Ubuntu</span>
+                        <span class="skill-tag">CI/CD Pipelines</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-network-wired"></i> Networking & OS</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linux Fundamentals</span>
+                        <span class="skill-tag">IP Addressing</span>
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">Agile Methodology</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Team Collaboration</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Attention to Detail</span>
+                        <span class="skill-tag">Time Management</span>
                     </div>
                 </div>
             </div>
@@ -196,77 +357,112 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-cloud"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Automated Collaborative Deployment Using Terraform and Jenkins</h3>
-                        <p>Built an automated CI/CD pipeline using Jenkins and Terraform to provision AWS infrastructure with automated deployment processes for efficient software delivery.</p>
+                        <h3>Automated Infrastructure Deployment using Terraform and Jenkins</h3>
+                        <p>Built an automated CI/CD pipeline using Jenkins and Terraform to provision AWS infrastructure. Implemented Infrastructure as Code (IaC) to reduce manual configuration errors and deployment time.</p>
                         <div class="project-tech">
                             <span>Jenkins</span>
                             <span>Terraform</span>
                             <span>AWS</span>
+                            <span>CI/CD</span>
+                            <span>IaC</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-code-branch"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Developed SIEM Engine for Malware Application Using Machine, Bayes, and Signet on Ubuntu</h3>
-                        <p>Built a SIEM application for malware using Machine Learning, Bayes, and Signet algorithms on Ubuntu platform for enhanced security monitoring.</p>
+                        <h3>Automated CI/CD Pipeline for Maven Applications</h3>
+                        <p>Designed CI/CD pipeline for Java Maven applications using Jenkins, Nexus, and Nginx on Ubuntu. Integrated artifact management and improved build automation and deployment efficiency.</p>
                         <div class="project-tech">
-                            <span>Machine Learning</span>
-                            <span>Bayes</span>
+                            <span>Jenkins</span>
+                            <span>Maven</span>
+                            <span>Nexus</span>
+                            <span>Nginx</span>
                             <span>Ubuntu</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-qrcode"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Smart IOT-enabled E-commerce using AR under android environment</h3>
-                        <p>Developed an innovative e-commerce application integrating IoT and Augmented Reality technologies for enhanced shopping experience on Android platform.</p>
+                        <h3>Smart ID Scanning System using QR Codes</h3>
+                        <p>Developed a smart attendance system using QR code scanning to automate student entry tracking. Improved accuracy and reduced manual work in attendance management.</p>
                         <div class="project-tech">
-                            <span>IoT</span>
-                            <span>AR</span>
-                            <span>Android</span>
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>QR Scanner</span>
+                            <span>Automation</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-brain"></i>
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & Publications</h2>
+            
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
                     </div>
-                    <div class="project-content">
-                        <h3>Photographic Scientists using machine learning 2024</h3>
-                        <p>Implemented machine learning algorithms for photographic analysis and scientific research applications with advanced image processing capabilities.</p>
-                        <div class="project-tech">
-                            <span>Machine Learning</span>
-                            <span>Image Processing</span>
-                            <span>Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
+                    <h3>AWS Certified Solutions Architect – Associate</h3>
+                    <p>Amazon Web Services</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>Microsoft Certified: Azure Administrator Associate</h3>
+                    <p>Microsoft</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java Programming Crash Course</h3>
+                    <p>Udemy</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Integrating Frameworks and Cloud Computing</h3>
+                    <p>NCCS</p>
+                </div>
+            </div>
+
+            <div class="publication-section">
+                <h3 class="subsection-title"><i class="fas fa-book"></i> Research Publication</h3>
+                <div class="publication-card">
+                    <div class="publication-content">
+                        <h4>Phishing URL Detection using Machine Learning</h4>
+                        <p>Published research focusing on detecting phishing websites using Gradient Boosting algorithms for improved accuracy in cybersecurity threat detection.</p>
+                        <span class="pub-badge">Research Paper</span>
                     </div>
                 </div>
             </div>
@@ -277,46 +473,38 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-description">I'm actively seeking opportunities in software development and cloud/DevOps roles. Let's connect and discuss how I can contribute to your team!</p>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p>I'm always interested in new opportunities and collaborations. Feel free to reach out if you'd like to discuss projects, internships, or just have a chat about technology!</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>tejaswinikawade@gmail.com</span>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:tejukawade2003@gmail.com">tejukawade2003@gmail.com</a>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Pune, Maharashtra, India</span>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Maharashtra, India</span>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <i class="fab fa-linkedin"></i>
-                            <span>linkedin.com/in/tejaswini-kawade</span>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/tejaswini-kawade-7578a1357/" target="_blank">linkedin.com/in/tejaswinikawade</a>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <i class="fab fa-github"></i>
-                            <span>github.com/Tejaswini280</span>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/Tejaswini280" target="_blank">github.com/tejaswinikawade</a>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- Certifications -->
-                    <div style="margin-top: 2rem;">
-                        <h4>Certifications</h4>
-                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-                            <li style="margin-bottom: 0.5rem;"><strong>AWS Certified Solutions Architect - Associate</strong></li>
-                            <li style="margin-bottom: 0.5rem;"><strong>Java SE 8 Programmer Certification</strong></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Publications -->
-                    <div style="margin-top: 2rem;">
-                        <h4>Publications</h4>
-                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            <strong>Photographic Scientists using machine learning 2024</strong><br>
-                            Ms. Tejaswini Kawade, Ms. Kavitha Sane, Ms. Pallavi Salunke, Ms. Ishika Shinde<br>
-                            "The study focuses on identifying promising directions with Graphical Reasoning using the latest machine learning techniques to enhance the efficiency of photographic analysis."
-                        </p>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
@@ -339,10 +527,11 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Tejaswini Kawade. All rights reserved.</p>
+            <p class="footer-tagline">Built with passion for innovation and excellence</p>
             <div class="footer-social">
-                <a href="mailto:tejaswinikawade@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/tejaswini-kawade"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Tejaswini280"><i class="fab fa-github"></i></a>
+                <a href="mailto:tejaswini.kawade@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/tejaswinikawade" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/tejaswinikawade" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>

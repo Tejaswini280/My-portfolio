@@ -1,15 +1,16 @@
 {
-  "name": "node-js-app",
+  "name": "tejaswini-kawade-portfolio",
   "version": "1.0.0",
+  "description": "Professional portfolio website for Tejaswini Kawade - Software Developer",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["portfolio", "web-development", "software-developer"],
+  "author": "Tejaswini Kawade <tejaswinikawade@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.19.2"
   },
